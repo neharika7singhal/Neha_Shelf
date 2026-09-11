@@ -7,12 +7,12 @@
 // ---------------------------------------------------------------
 
 export const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyB3FoWwgIaA7rYKoM68cIs7DB3y3dgXeZ8",
+  authDomain: "neha-shelf.firebaseapp.com",
+  projectId: "neha-shelf",
+  storageBucket: "neha-shelf.firebasestorage.app",
+  messagingSenderId: "455515528459",
+  appId: "1:455515528459:web:5776112afa318f2b80560e"
 };
 
 // This is just a folder name inside your database — it doesn't need
