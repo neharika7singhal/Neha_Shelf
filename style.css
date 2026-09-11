@@ -32,7 +32,7 @@ body {
   font-family: 'Work Sans', sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  padding-bottom: 90px; /* room for FAB */
+  padding-bottom: 130px; /* room for FAB */
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -224,7 +224,7 @@ body {
 .fab {
   position: fixed;
   right: 20px;
-  bottom: calc(20px + env(safe-area-inset-bottom));
+  bottom: calc(28px + env(safe-area-inset-bottom, 0px) + 28px);
   width: 58px;
   height: 58px;
   border-radius: 50%;
