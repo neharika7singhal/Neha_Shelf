@@ -10,13 +10,12 @@ function colorFor(category) {
 }
 
 const DEFAULT_CATEGORIES = [
-  'Everyday clothing',
-  'Ethnic wear',
+  'Wedding shopping',
+  'Daily clothing',
+  'Accessories',
+  'Bags',
   'Footwear',
-  'Stationery',
-  'Utensils & kitchen',
-  'Home decor',
-  'Accessories'
+  'Home decor'
 ];
 
 /* ---------- State ---------- */
