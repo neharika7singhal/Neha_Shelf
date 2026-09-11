@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#2b4d47">
+<title>Neharika's Retail Therapy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">Neharika's Retail Therapy</span>
+      <span class="brand-sub">an extremely serious archive of shopping decisions</span>
+    </div>
+    <span class="sync-badge" id="syncBadge">●&nbsp;checking sync…</span>
+  </header>
+
+  <nav class="filters" id="filterBar" aria-label="Filter by category"></nav>
+
+  <main class="board" id="board"></main>
+
+  <p class="empty-state" id="emptyState" hidden>
+    Shelf's empty. Tap the + and add the first place you can't stop thinking about.
+  </p>
+
+  <button class="fab" id="openAddBtn" aria-haspopup="dialog" aria-label="Add a site">+</button>
+
+  <!-- Add site dialog -->
+  <div class="overlay" id="addOverlay" hidden>
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="addTitle">
+      <h2 id="addTitle">Add a site</h2>
+
+      <label class="field">
+        <span>Website link</span>
+        <input type="url" id="inputUrl" placeholder="https://..." required inputmode="url">
+      </label>
+
+      <label class="field">
+        <span>Name it something you'll recognize</span>
+        <input type="text" id="inputName" placeholder="e.g. Zara, FabIndia, IKEA...">
+      </label>
+
+      <label class="field">
+        <span>Category</span>
+        <select id="inputCategory"></select>
+      </label>
+
+      <div class="field new-category-field" id="newCategoryField" hidden>
+        <span>New category name</span>
+        <input type="text" id="inputNewCategory" placeholder="e.g. Festive wear">
+      </div>
+
+      <p class="dialog-error" id="addError" hidden></p>
+
+      <div class="dialog-actions">
+        <button class="btn-ghost" id="cancelAddBtn" type="button">Cancel</button>
+        <button class="btn-solid" id="confirmAddBtn" type="button">Add to shelf</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Detail dialog -->
+  <div class="overlay" id="detailOverlay" hidden>
+    <div class="dialog dialog-wide" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+      <div class="detail-head">
+        <div>
+          <h2 id="detailTitle">—</h2>
+          <a class="detail-link" id="detailUrl" href="#" target="_blank" rel="noopener noreferrer">—</a>
+        </div>
+        <span class="tag" id="detailCategory">—</span>
+      </div>
+
+      <label class="field">
+        <span>Comments</span>
+        <textarea id="detailComments" rows="4" placeholder="What did you think? What did you buy, or want to buy?"></textarea>
+      </label>
+
+      <label class="field">
+        <span>Store location</span>
+        <textarea id="detailLocation" rows="2" placeholder="Which mall, market, or city — or 'online only'"></textarea>
+      </label>
+
+      <span class="save-indicator" id="saveIndicator">saved</span>
+
+      <div class="dialog-actions dialog-actions-split">
+        <button class="btn-danger" id="removeBtn" type="button">Remove from shelf</button>
+        <button class="btn-solid" id="closeDetailBtn" type="button">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
