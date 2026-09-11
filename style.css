@@ -21,6 +21,8 @@
 
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
+[hidden] { display: none !important; }
+
 html { color-scheme: light; }
 
 body {
