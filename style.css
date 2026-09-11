@@ -149,9 +149,10 @@ body {
 
 .card-top {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 10px;
+  gap: 8px 10px;
   margin-bottom: 4px;
 }
 
@@ -161,11 +162,17 @@ body {
   font-weight: 600;
   margin: 0;
   color: var(--ink);
+  min-width: 0;
+  flex: 1 1 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .tag {
-  flex-shrink: 0;
+   flex-shrink: 0;
   display: inline-block;
+  max-width: 100%;
   background: var(--cat-color, var(--teal));
   color: #fff;
   border-radius: 999px;
